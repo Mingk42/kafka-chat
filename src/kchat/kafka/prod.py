@@ -11,7 +11,7 @@ start=time.time()
 
 for i in range(10):
     data={"str": "value"+str(i)}
-    prod.send("topic1", value=data)
+    prod.send("topic5", value=data)
     prod.flush()
 
 end=time.time()
