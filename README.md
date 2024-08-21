@@ -1,12 +1,13 @@
 # kchat
 
-### producer
+### Usage
+#### producer
 ```bash
 $ python src/kchat/kafka/prod.py
 [실행시간]: 0.03552985191345215
 ```
 
-### consumer
+#### consumer
 ```bash
 $ $KAFKA_HOME/bin/kafka-console-consumer.sh --topic topic1 --bootstrap-server localhost:9092 --from-beginning   # console 켜지기 전부터 쌓인 topic을 모두 읽어옴
 $ $KAFKA_HOME/bin/kafka-console-consumer.sh --topic topic1 --bootstrap-server localhost:9092                    # console 켜진 순간부터 읽어옴
