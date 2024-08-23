@@ -18,7 +18,11 @@ print("메시지 대기 중...")
 try:
     for msg in consumer:
         data=msg.value
-        print(f"[datetime.fromtimestamp(msg.timestamp/1000)][FRIEND] {data['message']}")
+        if data["message"].lower()=="exit":
+            print(f"[{datetime.fromtimestamp(data['time'])}] 발신자가 프로그램을 종료하였습니다.")
+            print(f"[{datetime.fromtimestamp(data['time'])}] 수신 프로그램을 종료합니다.")
+            break
+        print(f"[{datetime.fromtimestamp(data['time'])}][FRIEND] {data['message']}")
 except KeyboardInterrupt:
     print("\n채팅 종료")
 finally:
