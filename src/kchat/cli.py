@@ -1,3 +1,3 @@
 
 def ping():
-    return "pong"
+    return "kchat-pong"

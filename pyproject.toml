@@ -1,11 +1,13 @@
 [project]
 name = "kchat"
-version = "0.1.0"
+version = "0.3.0"
 description = "real time chat app through KAFKA"
 authors = [
     {name = "Mingk42", email = "xoals123456t@gmail.com"},
 ]
-dependencies = []
+dependencies = [
+    "kafka-python>=2.0.2",
+]
 requires-python = ">=3.8"
 readme = "README.md"
 license = {text = "MIT"}
